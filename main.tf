@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "RG" {
   count    = length(var.location)
   name     = "rg-global-vnet-peering-${count.index}"
   location = element(var.location, count.index)
